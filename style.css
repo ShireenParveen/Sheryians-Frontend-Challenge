@@ -1,0 +1,175 @@
+@font-face {
+    font-family: lausanne;
+    src: url(./Lausanne-Regular.ttf);
+}
+
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: lausanne;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+#loader{
+    width: 100%;
+    height: 100vh;
+    background-color: #000;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#nav{
+    width: 100%;
+    height: 75px;
+    position: fixed;
+    top: 0;  
+    z-index: 999; 
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 40px;
+    overflow: hidden;
+}
+#nav h5{
+    font-weight: 500;
+    font-size: 15px;
+    opacity: 0;
+}
+.line{
+    width: 0%;
+    height: .2px;
+    background-color: #8b8686;
+    position: absolute;
+    bottom: 0%;
+    left: 0;
+    z-index: 99;
+}
+.inner-line{
+    width: 0%;
+    height: 3px;
+    background-color: #fff;
+    position: absolute;
+    top: 50%;
+    transform: translate(0,-50%);
+}
+.inner-nav{
+    width: 100%;
+    height: 100%;
+    background-color: #6a6a6ab7;
+    position: absolute;
+    left: 0;
+    bottom: -100%;
+    transition: all ease 0.5s;
+    display: flex;
+}
+.inner-nav-left{
+    width: 35%;
+    height: 100%;
+    background-color: #fff;
+    color: #000;
+    display: flex;
+    align-items: center;
+    padding-left: 40px;
+}
+#nav:hover .inner-nav{
+bottom: 0%;
+}
+#nav:hover .inner-line{
+    opacity: 0;
+}
+.inner-nav-middle{
+    width: 35%;
+    height: 100%;    
+    color: #fff;
+    display: flex;
+    align-items: center;
+    padding-left: 40px;
+}
+.inner-nav-right{
+    width: 35%;
+    height: 100%;   
+    color: #fff;
+    display: flex;
+    align-items: center;
+    padding-left: 40px;
+}
+.loader-text{
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+    z-index: 99;
+}
+.loader-text h1{
+    font-size: 9vw;
+    font-weight: 100;
+}
+.loader-text h2{
+    font-size: 9vw;
+    font-weight: 100;
+}
+span{
+    display: inline-block;
+}
+.image-container{
+    width: 22%;
+    height: 47%;   
+    position: absolute;
+}
+.image-container img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    opacity: 0;
+}
+#center{
+    width: 100%;
+    height: 55%;    
+    position: absolute;
+    display: none;    
+}
+.center-center{   
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    display: flex;
+    align-items: center;
+    flex-direction: column;   
+    cursor: pointer;
+}
+.center-text{
+    display: flex;
+    gap: 2vw;
+    position: relative;
+    height: 12vw;    
+    overflow: hidden;
+}
+.center-text h1{
+    font-size: 11vw;
+    font-weight: 100;
+    line-height: 11vw;
+}
+.center-text h2{
+    font-size: 11vw;
+    font-weight: 100;
+    line-height: 11vw;
+}
+.center-line{
+    width: 0%;
+    height: 10px;
+    background-color: #fff;
+    position: absolute;
+    left: 0;    
+    bottom: 6%;
+    transition: all ease 0.5s;
+    display: none;
+    font-weight: 500;
+}
